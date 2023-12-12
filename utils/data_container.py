@@ -77,7 +77,7 @@ def get_data_loader(data_category: list,
 
     for key in ['train', 'validate', 'test']:
         dataset = traffic_demand_prediction_dataset(X_, Y_, key, val_len, test_len)
-        dls[key] = DataLoader(dataset=dataset, shuffle=True, batch_size=batch_size, num_workers=16)
+        dls[key] = DataLoader(dataset=dataset, shuffle=True, batch_size=batch_size, num_workers=1)
     return dls, normal
 
 
